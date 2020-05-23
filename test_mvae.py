@@ -12,14 +12,6 @@ from scipy import signal
 from MVAE import MVAE
 
 
-def print_para(para, pprint=print, indent=0):
-    pre = '\t' * indent
-    for key, value in para.items():
-        pprint('{}{}={}'.format(pre, key, value))
-
-    return None
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Test script for MVAE")
     parser.add_argument('--gpu', '-g', type=int, help="GPU ID (negative value indicates CPU)", default=-1)
