@@ -98,27 +98,6 @@ class Decoder(nn.Module):
         return torch.clamp(h, min=-80.)
 
 
-class Classifier(nn.Module):
-    def __init__(self, n_freq, n_label, type="1D"):
-        super(Classifier, self).__init__()
-        self.type = type
-        self.conv1 = GatedConv2D(n_freq, n_freq//2, (1, 5), (1, 1), (0, 2))
-        self.conv2 = GatedConv2D(n_freq//2, n_freq//4, (1, 4), (1, 2), (0, 1))
-        self.conv3 = GatedConv2D(n_freq//4, n_freq//16, (1, 4), (1, 2), (0, 1))
-        self.conv4 = nn.Conv2d(n_freq//16, n_label, (1, 4), (1, 2), (0, 1))
-        self.softmax = nn.Softmax(dim=1)
-
-    def forward(self, x):
-        if self.type == "1D":
-            x = x.permute(0, 2, 1, 3)
-        h = self.conv4(self.conv3(self.conv2(self.conv1(x))))
-        h = self.softmax(h)
-        h = torch.prod(h, dim=3)
-        prob = torch.squeeze(torch.clamp(h, 1.e-16), dim=2)
-
-        return prob
-
-
 class CVAE(nn.Module):
     def __init__(self, encoder, decoder):
         super(CVAE, self).__init__()
