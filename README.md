@@ -71,13 +71,10 @@ If you find this work is useful for your research or project, please cite out pa
 * Demo: http://www.kecl.ntt.co.jp/people/kameoka.hirokazu/Demos/mvae-ass/index.html
 * Related work:
 1. Fast algorithm:
-
 Li Li, Hirokazu Kameoka, and Shoji Makino, "Fast MVAE: Joint separation and classification of mixed sources based on multichannel variational autoencoder with auxiliary classifier," in Proc. ICASSP2019, pp. 546-550, May 2019.
 
 2. Underdetermined source separation:
-
 Shogo Seki, Hirokazu Kameoka, Li Li, Tomoki Toda, and Kazuya Takeda, "Underdetermined Source Separation Based on Generalized Multichannel Variational Autoencoder," IEEE Access, vol. 7, No. 1, pp. 168104-168115, Nov. 2019.
 
 3. Determined source separation and dereverberation:
-
 Shota Inoue, Hirokazu Kameoka, Li Li, Shogo Seki, and Shoji Makino, "Joint separation and dereverberation of reverberant mixtures with multichannel variational autoencoder," in Proc. ICASSP2019, pp. 56-60, May 2019.
