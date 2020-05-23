@@ -25,7 +25,6 @@ elif [ $FILE == "model-VCC" ]; then
     mkdir -p ./pretrained_model/
     wget -N $URL -O $ZIP_FILE
     unzip -qq $ZIP_FILE -d ./pretrained_model/
-    mv ./pretrained_model/model_vcc/ ./pretrained_model/vcc/
     rm $ZIP_FILE
 
 else
