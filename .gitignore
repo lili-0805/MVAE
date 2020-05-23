@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+.idea/
+__pycache__/
+*.py[cod]
+nohup*
+.nfs*
+data/
+model/
+output/
