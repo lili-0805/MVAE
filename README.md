@@ -18,7 +18,7 @@ Code was tested using following packages.
 Get MVAE code
 
 ```bash
-git clone git@github.com:lili-0805/MVAE.git
+git clone https://github.com/lili-0805/MVAE.git
 ```
 
 Using download script to download training dataset, test dataset, and pretrained model.
@@ -45,13 +45,15 @@ python train_cvae.py --dataset vcc --save_root ./model/ --gpu 0
 To test MVAE algorithm with trained model, run the script below.
 
 ```python
-python test_mvae.py --input_root ./data/test_input/ --output_root ./output/ --n_itr0 30 --n_itr1 30 --model_path ./model/vcc/1000.model --gpu 0
+python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
+--n_itr0 30 --n_itr1 30 --model_path ./model/vcc/1000.model --gpu 0
 ```
 
 To test MVAE algorithm with pretrained model, run the script below.
 
 ```python
-python test_mvae.py --input_root ./data/test_input/ --output_root ./output/ --n_itr0 30 --n_itr1 30 --model_path ./pretrained_model/model-vcc/1000.model --gpu 0
+python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
+--n_itr0 30 --n_itr1 30 --model_path ./pretrained_model/model-vcc/1000.model --gpu 0
 ```
 
 ## Update history
