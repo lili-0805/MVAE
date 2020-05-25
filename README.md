@@ -2,7 +2,7 @@
 
 This repository provides official PyTorch implementation of multichannel variational autoencoder (MVAE) proposed in the following papers:
 
-* Hirokazu Kameoka, Li Li, Shota Inoue, and Shoji Makino, "Supervised Determined Source Separation with Multichannel Variational Autoencoder," Neural Computation, vol. 31, no. 9, pp. 1-24, Sep. 2019.
+* Hirokazu Kameoka, Li Li, Shota Inoue, and Shoji Makino, "Supervised Determined Source Separation with Multichannel Variational Autoencoder," Neural Computation, vol. 31, no. 9, pp. 1891-1914, Sep. 2019.
 
 
 ## Dependencies
@@ -65,7 +65,7 @@ License: [MIT](https://choosealicense.com/licenses/mit/)
 
 If you find this work is useful for your research or project, please cite out paper:
 
-* Hirokazu Kameoka, Li Li, Shota Inoue, and Shoji Makino, "Supervised Determined Source Separation with Multichannel Variational Autoencoder," Neural Computation, vol. 31, no. 9, pp. 1-24, Sep. 2019.
+* Hirokazu Kameoka, Li Li, Shota Inoue, and Shoji Makino, "Supervised Determined Source Separation with Multichannel Variational Autoencoder," Neural Computation, vol. 31, no. 9, pp. 1891-1914, Sep. 2019.
 
 
 ## See also
