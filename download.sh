@@ -1,3 +1,27 @@
+progressfilt ()
+{
+    local flag=false c count cr=$'\r' nl=$'\n'
+    while IFS='' read -d '' -rn 1 c
+    do
+        if $flag
+        then
+            printf '%s' "$c"
+        else
+            if [[ $c != $cr && $c != $nl ]]
+            then
+                count=0
+            else
+                ((count++))
+                if ((count > 1))
+                then
+                    flag=true
+                fi
+            fi
+        fi
+    done
+}
+
+
 FILE=$1
 
 if [ $FILE == "dataset-VCC" ]; then
@@ -5,7 +29,7 @@ if [ $FILE == "dataset-VCC" ]; then
     URL=http://www.kecl.ntt.co.jp/people/kameoka.hirokazu/data/mvae/vcc.zip
     ZIP_FILE=./data/vcc.zip
     mkdir -p ./data/
-    wget --progress=bar -nv $URL -O $ZIP_FILE
+    wget --progress=bar:force $URL -O $ZIP_FILE 2>&1 | progressfilt
     unzip -qq $ZIP_FILE -d ./data/
     rm $ZIP_FILE
 
@@ -14,7 +38,7 @@ elif [ $FILE == "test-samples" ]; then
     URL=http://www.kecl.ntt.co.jp/people/kameoka.hirokazu/data/mvae/test_input.zip
     ZIP_FILE=./data/test_input.zip
     mkdir -p ./data/
-    wget --progress=bar -nv $URL -O $ZIP_FILE
+    wget --progress=bar:force $URL -O $ZIP_FILE 2>&1 | progressfilt
     unzip -qq $ZIP_FILE -d ./data/
     rm $ZIP_FILE
 
@@ -23,12 +47,12 @@ elif [ $FILE == "model-VCC" ]; then
     URL=http://www.kecl.ntt.co.jp/people/kameoka.hirokazu/data/mvae/model-vcc.zip
     ZIP_FILE=./pretrained_model/vcc.zip
     mkdir -p ./pretrained_model/
-    wget --progress=bar -nv $URL -O $ZIP_FILE
+    wget --progress=bar:force $URL -O $ZIP_FILE 2>&1 | progressfilt
     unzip -qq $ZIP_FILE -d ./pretrained_model/
     rm $ZIP_FILE
-
+​
 else
     echo "Available arguments are dataset-VCC, test-samples, model-VCC."
     exit 1
-    
+​
 fi
