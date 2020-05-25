@@ -24,10 +24,10 @@ git clone https://github.com/lili-0805/MVAE.git
 Using download script to download training dataset, test dataset, and pretrained model.
 
 ```bash
-cd MVAE
-bash download.sh dataset-VCC
-bash download.sh test-samples
-bash download.sh model-VCC
+$ cd MVAE
+$ bash download.sh dataset-VCC
+$ bash download.sh test-samples
+$ bash download.sh model-VCC
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ bash download.sh model-VCC
 To train CVAE on VCC dataset, run the training script below.
 
 ```python
-python train_cvae.py --dataset vcc --save_root ./model/ --gpu 0
+$ python train_cvae.py --dataset vcc --save_root ./model/ --gpu 0
 ```
 
 **2. Test MVAE**
@@ -45,15 +45,15 @@ python train_cvae.py --dataset vcc --save_root ./model/ --gpu 0
 To test MVAE algorithm with trained model, run the script below.
 
 ```python
-python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
---n_itr0 30 --n_itr1 30 --model_path ./model/vcc/1000.model --gpu 0
+$ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
+  --n_itr0 30 --n_itr1 30 --model_path ./model/vcc/1000.model --gpu 0
 ```
 
 To test MVAE algorithm with pretrained model, run the script below.
 
 ```python
-python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
---n_itr0 30 --n_itr1 30 --model_path ./pretrained_model/model-vcc/1000.model --gpu 0
+$ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
+  --n_itr0 30 --n_itr1 30 --model_path ./pretrained_model/model-vcc/1000.model --gpu 0
 ```
 
 ## Update history
