@@ -18,7 +18,7 @@ Code was tested using following packages.
 Get MVAE code
 
 ```bash
-git clone https://github.com/lili-0805/MVAE.git
+$ git clone https://github.com/lili-0805/MVAE.git
 ```
 
 Using download script to download training dataset, test dataset, and pretrained model.
