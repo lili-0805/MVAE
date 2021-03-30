@@ -59,7 +59,7 @@ elif [ $FILE == "model-WSJ0" ]; then
     wget --progress=bar:force $URL -O $ZIP_FILE 2>&1 | progressfilt
     unzip -qq $ZIP_FILE -d ./pretrained_model/
     rm $ZIP_FILE
-​
+    
 else
     echo "Available arguments are dataset-VCC, test-samples, model-VCC, model-WSJ0."
     exit 1
