@@ -30,7 +30,7 @@ Using download script to download training dataset, test dataset, and pretrained
 
 The test samples were generated using the VCC dataset. Namely, the test samples are speaker-closed for models trained using the VCC dataset, and speaker-open for models trained using the WSJ0 dataset.
 
-Because of the license of WSJ0 database, we do not provide training dataset of WSJ0. Please download WSJ0 database and prepare trainging dataset described in our paper #2 by yourselves. 
+Considering the license of WSJ0 database, we do not provide training dataset of WSJ0. Please download WSJ0 database and prepare trainging dataset described in our paper #2 by yourselves. 
 
 ```bash
 $ cd MVAE
