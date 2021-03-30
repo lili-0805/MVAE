@@ -52,9 +52,9 @@ elif [ $FILE == "model-VCC" ]; then
     rm $ZIP_FILE
 
 elif [ $FILE == "model-WSJ0" ]; then
-    # pretrained model using VCC dataset
+    # pretrained model using WSJ0 dataset
     URL=http://www.kecl.ntt.co.jp/people/kameoka.hirokazu/data/mvae/model-wsj0.zip
-    ZIP_FILE=./pretrained_model/vcc.zip
+    ZIP_FILE=./pretrained_model/wsj0.zip
     mkdir -p ./pretrained_model/
     wget --progress=bar:force $URL -O $ZIP_FILE 2>&1 | progressfilt
     unzip -qq $ZIP_FILE -d ./pretrained_model/
