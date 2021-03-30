@@ -96,6 +96,23 @@ def MVAE(X, AlgPara, NNPara, gpu=-1):
         models.append(src_model)
         optims.append(optimizer)
 
+    # initialize z, l by running BP 100 iterations
+    Q = np.zeros((N, I, J))
+    for n in range(N):
+        y_abs = torch.from_numpy(np.asarray(Y_abs_array_norm[n, None, :, 1:, :], dtype="float32")).to(device)
+        for iz in range(100):
+            optims[n].zero_grad()
+            loss = models[n].loss(y_abs)
+            loss.backward()
+            optims[n].step()
+        Q[n, 1:I, :] = models[n].get_power_spec(cpu=True)
+
+    Q = np.maximum(Q, epsi)
+    gv = np.mean(np.divide(P[:, 1:I, :], Q[:, 1:I, :]), axis=(1, 2), keepdims=True)
+    Rhat = np.multiply(Q, gv)
+    Rhat[:, 0, :] = R[:, 0, :]
+    R = Rhat
+
     # Algorithm for MVAE
     # Iterative update
     for it in range(AlgPara['it1']):
