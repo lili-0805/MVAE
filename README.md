@@ -60,7 +60,6 @@ $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/
 ```
 
 To test MVAE algorithm with pretrained VCC model, run the script below. 
-
 This command initializes MVAE with ILRMA.
 
 ```python
@@ -69,7 +68,6 @@ $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/
 ```
 
 To test MVAE algorithm with pretrained WSJ0 model, run the script below. 
-
 This command initializes MVAE with identity matrix (i.e. w/o initialization algorithm).
 
 ```python
@@ -79,7 +77,7 @@ $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/
 
 ## Update history
 
-* Release pretrained speaker-independent model. (March 30, 2021)
+* Release pretrained speaker-independent model described in paper #2. (March 30, 2021)
 * Update MVAE implementation by adding initialization process of latent variable "z" and class label "l". (March 30, 2021)
 * Release MVAE scripts and speaker-dependent training dataset and pretrained model. (May 23, 2020)
 
