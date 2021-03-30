@@ -7,3 +7,4 @@ nohup*
 data/
 model/
 output/
+.python-version
