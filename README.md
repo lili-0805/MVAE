@@ -52,14 +52,14 @@ $ python train_cvae.py --dataset vcc --save_root ./model/ --gpu 0
 
 **2. Test MVAE**
 
-To test MVAE algorithm with trained model, run the script below.
+1. To test MVAE algorithm with trained model, run the script below.
 
 ```python
 $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
   --n_itr0 30 --n_itr1 30 --model_path ./model/vcc/1000.model --gpu 0
 ```
 
-To test MVAE algorithm with pretrained VCC model, run the script below. 
+2. To test MVAE algorithm with pretrained VCC model, run the script below. 
 This command initializes MVAE with ILRMA.
 
 ```python
@@ -67,7 +67,7 @@ $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/
   --n_itr0 30 --n_itr1 30 --model_path ./pretrained_model/model-vcc/1000.model --gpu 0
 ```
 
-To test MVAE algorithm with pretrained WSJ0 model, run the script below. 
+3. To test MVAE algorithm with pretrained WSJ0 model, run the script below. 
 This command initializes MVAE with identity matrix (i.e. w/o initialization algorithm).
 
 ```python
