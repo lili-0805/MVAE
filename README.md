@@ -1,6 +1,9 @@
 # MVAE -multichannel variational autoencoder for audio source separation-
 
-This repository provides official PyTorch implementation of multichannel variational autoencoder (MVAE) proposed in the following papers. We also provide pretrained models for speaker-closed situation described in the paper #1 and speaker-open situation described in the paper #2. FastMVAE is coming soon...
+This repository provides official PyTorch implementation of multichannel variational autoencoder (MVAE) proposed in the following papers. 
+We also provide pretrained models for speaker-closed situation described in the paper #1 and speaker-open situation described in the paper #2. 
+
+FastMVAE is coming soon...
 
 1. Hirokazu Kameoka, Li Li, Shota Inoue, and Shoji Makino, "Supervised Determined Source Separation with Multichannel Variational Autoencoder," Neural Computation, vol. 31, no. 9, pp. 1891-1914, Sep. 2019.
 2. Li Li, Hirokazu Kameoka, Shota Inoue, and Shoji Makino, "FastMVAE: A fast optimization algorithm for the multichannel variational autoencoder method," IEEE Accesss, vol. 8, pp. 228740-228753, Dec. 2020.
