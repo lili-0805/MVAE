@@ -1,12 +1,13 @@
 # MVAE -multichannel variational autoencoder for audio source separation-
 
 This repository provides official PyTorch implementation of multichannel variational autoencoder (MVAE) proposed in the following papers. 
-We also provide pretrained models for speaker-closed situation described in the paper #1 and speaker-open situation described in the paper #2. 
 
-FastMVAE is coming soon...
+We also provide pretrained models for speaker-closed situation described in the paper #1 and speaker-open situation described in the paper #2. 
 
 1. Hirokazu Kameoka, Li Li, Shota Inoue, and Shoji Makino, "Supervised Determined Source Separation with Multichannel Variational Autoencoder," Neural Computation, vol. 31, no. 9, pp. 1891-1914, Sep. 2019.
 2. Li Li, Hirokazu Kameoka, Shota Inoue, and Shoji Makino, "FastMVAE: A fast optimization algorithm for the multichannel variational autoencoder method," IEEE Accesss, vol. 8, pp. 228740-228753, Dec. 2020.
+
+FastMVAE is coming soon...
 
 
 ## Dependencies
@@ -26,7 +27,9 @@ $ git clone https://github.com/lili-0805/MVAE.git
 ```
 
 Using download script to download training dataset, test dataset, and pretrained models.
+
 The test samples were generated using the VCC dataset. Namely, the test samples are speaker-closed for models trained using the VCC dataset, and speaker-open for models trained using the WSJ0 dataset.
+
 Because of the license of WSJ0 database, we do not provide training dataset of WSJ0. Please download WSJ0 database and prepare trainging dataset described in our paper #2 by yourselves. 
 
 ```bash
@@ -56,14 +59,18 @@ $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/
   --n_itr0 30 --n_itr1 30 --model_path ./model/vcc/1000.model --gpu 0
 ```
 
-To test MVAE algorithm with pretrained VCC model, run the script below. This command initializes MVAE with ILRMA.
+To test MVAE algorithm with pretrained VCC model, run the script below. 
+
+This command initializes MVAE with ILRMA.
 
 ```python
 $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
   --n_itr0 30 --n_itr1 30 --model_path ./pretrained_model/model-vcc/1000.model --gpu 0
 ```
 
-To test MVAE algorithm with pretrained WSJ0 model, run the script below. This command initializes MVAE with identity matrix (i.e. w/o initialization algorithm).
+To test MVAE algorithm with pretrained WSJ0 model, run the script below. 
+
+This command initializes MVAE with identity matrix (i.e. w/o initialization algorithm).
 
 ```python
 $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/  
