@@ -9,4 +9,4 @@ model/
 output/
 .python-version
 MVAE_github
-pretrained_model
+pretrained_model/
