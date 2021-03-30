@@ -8,5 +8,6 @@ data/
 model/
 output/
 .python-version
-MVAE_github
+MVAE_github/
 pretrained_model/
+venv/

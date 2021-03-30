@@ -50,9 +50,18 @@ elif [ $FILE == "model-VCC" ]; then
     wget --progress=bar:force $URL -O $ZIP_FILE 2>&1 | progressfilt
     unzip -qq $ZIP_FILE -d ./pretrained_model/
     rm $ZIP_FILE
+
+elif [ $FILE == "model-WSJ0" ]; then
+    # pretrained model using VCC dataset
+    URL=http://www.kecl.ntt.co.jp/people/kameoka.hirokazu/data/mvae/model-wsj0.zip
+    ZIP_FILE=./pretrained_model/vcc.zip
+    mkdir -p ./pretrained_model/
+    wget --progress=bar:force $URL -O $ZIP_FILE 2>&1 | progressfilt
+    unzip -qq $ZIP_FILE -d ./pretrained_model/
+    rm $ZIP_FILE
 ​
 else
-    echo "Available arguments are dataset-VCC, test-samples, model-VCC."
+    echo "Available arguments are dataset-VCC, test-samples, model-VCC, model-WSJ0."
     exit 1
 ​
 fi
