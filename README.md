@@ -82,7 +82,7 @@ $ python test_mvae.py --input_root ./data/test_input/ --output_root ./output/
 * Release MVAE scripts and speaker-dependent training dataset and pretrained model. (May 23, 2020)
 
 ## License and ackwonledgements
-License: [MIT](https://choosealicense.com/licenses/mit/)
+License: Creative Commons Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND)
 
 If you find this work is useful for your research or project, please cite out papers:
 
